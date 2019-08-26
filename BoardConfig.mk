@@ -81,6 +81,10 @@ TARGET_KERNEL_CONFIG := vendor/nabu_user_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_SOURCE := kernel/xiaomi/nabu
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_nabu
+TARGET_RECOVERY_DEVICE_MODULES := libinit_nabu
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 

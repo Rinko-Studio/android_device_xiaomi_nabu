@@ -34,6 +34,11 @@ void load_global() {
     property_override("ro.build.version.security_patch", "2022-07-01");
 }
 
+void load_more_property() {
+    //  Disable OEM unlock prop
+    property_override("ro.oem_unlock_supported", "0");
+}
+
 void vendor_load_properties() {
     std::string region = android::base::GetProperty("ro.boot.hwc", "");
 
@@ -41,4 +46,6 @@ void vendor_load_properties() {
         load_china();
     else if (region.find("GLOBAL") != std::string::npos)
         load_global();
+    
+    load_more_property();
 }

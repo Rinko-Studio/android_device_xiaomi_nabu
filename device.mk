@@ -96,7 +96,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.nabu
 
-# Overlays
+# Parts
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
+# RRO Overlays
 PRODUCT_PACKAGES += \
     FrameworkResOverlayNabu \
     WifiResOverlayNabu \

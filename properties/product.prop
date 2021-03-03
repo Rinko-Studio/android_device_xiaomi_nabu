@@ -1,2 +1,7 @@
 ro.config.vc_call_vol_steps=11
 ro.config.media_vol_steps=25
+
+# SoC
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SM8150
+

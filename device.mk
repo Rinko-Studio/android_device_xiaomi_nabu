@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+$(call inherit-product, vendor/xiaomi/nabu/nabu-vendor.mk)
+
 NABU_PREBUILT := device/xiaomi/nabu-prebuilt
 
 # Enable updating of APEXes

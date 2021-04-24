@@ -7,7 +7,10 @@
 cc_library_static {
     name: "libinit_nabu",
     srcs: ["init_nabu.cpp"],
-    shared_libs: ["libbase"],
+    shared_libs: [
+        "libbase",
+        "libfs_mgr",
+    ],
     recovery_available: true,
     include_dirs: [
         "system/core/init",

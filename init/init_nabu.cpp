@@ -11,6 +11,9 @@
 #include "vendor_init.h"
 #include "property_service.h"
 
+#include <fs_mgr_dm_linear.h>
+
+
 void property_override(char const prop[], char const value[]) {
     prop_info *pi;
 
@@ -48,4 +51,12 @@ void vendor_load_properties() {
         load_global();
     
     load_more_property();
+
+#ifdef __ANDROID_RECOVERY__
+    std::string buildtype = android::base::GetProperty("ro.build.type", "userdebug");
+    if (buildtype != "user") {
+        property_override("ro.debuggable", "1");
+        property_override("ro.adb.secure.recovery", "0");
+    }
+#endif
 }

@@ -87,7 +87,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.nabu
+    android.hardware.lights-service.nabu
 
 # Overlays
 PRODUCT_PACKAGES += \

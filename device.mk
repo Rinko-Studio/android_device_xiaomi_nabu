@@ -119,3 +119,16 @@ PRODUCT_COPY_FILES += \
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
+
+# WiFi Display
+PRODUCT_PACKAGES += \
+    libavservices_minijail \
+    libdisplayconfig.qti \
+    libminijail \
+    libnl \
+    libqdMetaData \
+    libwfdaac_vendor \
+    vendor.display.config@2.0
+
+PRODUCT_BOOT_JARS += \
+    WfdCommon

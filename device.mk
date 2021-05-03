@@ -129,6 +129,9 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 # Perf
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service.nabu
 
 # Properties
 include $(LOCAL_PATH)/properties/default.mk

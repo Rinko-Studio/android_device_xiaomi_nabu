@@ -81,7 +81,8 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworkResOverlayNabu \
-    WifiResOverlayNabu
+    WifiResOverlayNabu \
+    SystemUIOverlayNabu
 
 # Overlays - override vendor ones
 PRODUCT_PACKAGES += \

@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/xiaomi/nabu
+NABU_PREBUILT := device/xiaomi/nabu-prebuilt
 
 BUILD_BROKEN_DUP_RULES := true
 
@@ -14,6 +15,7 @@ AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
+    odm \
     product \
     system \
     system_ext \

@@ -117,8 +117,6 @@ TARGET_PRODUCT_PROP += $(DEVICE_PATH)/properties/product.prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/properties/system.prop
 TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/properties/system_ext.prop
 
-BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
-
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 

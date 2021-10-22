@@ -13,14 +13,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Virtual A/B
-ENABLE_VIRTUAL_AB := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 # Enable Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
-
-#Suppot to compile recovery without msm headers
-TARGET_HAS_GENERIC_KERNEL_HEADERS := true
 
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30

@@ -24,7 +24,8 @@ AB_OTA_PARTITIONS += \
     system_ext \
     vbmeta \
     vbmeta_system \
-    vendor_boot
+    vendor_boot \
+    vendor
 
 # Architecture
 TARGET_ARCH := arm64

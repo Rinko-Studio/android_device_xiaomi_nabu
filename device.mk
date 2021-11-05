@@ -22,6 +22,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
+PRODUCT_TARGET_VNDK_VERSION := $(PRODUCT_SHIPPING_API_LEVEL)
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -142,9 +143,6 @@ PRODUCT_COPY_FILES += \
 # Vendor boot modules
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(NABU_PREBUILT)/modules/,$(TARGET_COPY_OUT_VENDOR_RAMDISK)/lib/modules)
-
-# VNDK
-PRODUCT_TARGET_VNDK_VERSION := 30
 
 # WiFi Display
 PRODUCT_PACKAGES += \

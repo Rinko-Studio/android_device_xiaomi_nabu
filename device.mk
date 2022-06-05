@@ -105,7 +105,8 @@ PRODUCT_PACKAGES += \
     FrameworkResOverlayNabu \
     WifiResOverlayNabu \
     SystemUIOverlayNabu \
-    SettingsProviderOverlayNabu
+    SettingsProviderOverlayNabu \
+    SettingsOverlayNabu
 
 # Overlays - override vendor ones
 PRODUCT_PACKAGES += \

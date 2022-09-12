@@ -40,6 +40,7 @@ on init
     write /config/usb_gadget/g1/os_desc/use 1
     write /config/usb_gadget/g1/os_desc/b_vendor_code 0x1
     write /config/usb_gadget/g1/os_desc/qw_sign "MSFT100"
+    setprop ro.adb.secure.recovery 0
     setprop sys.usb.configfs 1
 
 on property:ro.boot.usbcontroller=*

@@ -18,5 +18,6 @@
 -->
 <resources>
     <string name="def_device_name">Xiaomi Mi Pad 5</string>
- 
+    <bool name="def_accelerometer_rotation">true</bool>
+
 </resources>

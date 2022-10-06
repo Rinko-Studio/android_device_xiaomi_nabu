@@ -103,6 +103,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     XiaomiParts
 
+# Remove packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # RRO Overlays
 PRODUCT_PACKAGES += \
     FrameworkResOverlayNabu \

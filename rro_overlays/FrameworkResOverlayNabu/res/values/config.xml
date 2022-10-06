@@ -341,21 +341,19 @@
          The default is false. -->
     <bool name="config_suspendWhenScreenOffDueToProximity">false</bool>
 
-    <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
+
+   <!-- Do the battery/notification LEDs support pulsing?
+         Used to decide if we show pulse settings -->
+   <bool name="config_ledCanPulse">false</bool>
+
+   <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
+   <bool name="config_intrusiveBatteryLed">false</bool>
+
+    <!-- List supported color modes. -->
     <integer-array name="config_availableColorModes">
-        <item>0</item>
-        <item>1</item>
-        <item>3</item>
-        <item>256</item>
-        <item>257</item>
-        <item>258</item>
-        <item>259</item>
-        <item>260</item>
-        <item>261</item>
-        <item>262</item>
-        <item>263</item>
-        <item>264</item>
-        <item>265</item>
+        <item>0</item> <!-- COLOR_MODE_NATURAL -->
+        <item>1</item> <!-- COLOR_MODE_BOOSTED -->
+        <item>2</item> <!-- COLOR_MODE_SATURATED -->
     </integer-array>
 
     <!-- Configure mobile tcp buffer sizes in the form:

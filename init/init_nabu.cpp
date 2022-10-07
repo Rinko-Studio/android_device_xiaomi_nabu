@@ -25,11 +25,13 @@ void property_override(char const prop[], char const value[]) {
 void load_china() {
     property_override("ro.build.fingerprint", "Xiaomi/nabu/nabu:11/RKQ1.200826.002/V13.0.9.0.RKXCNXM:user/release-keys");
     property_override("ro.product.model", "21051182C");
+    property_override("ro.build.version.security_patch", "2022-05-01");
 }
 
 void load_global() {
     property_override("ro.build.fingerprint", "Xiaomi/nabu_global/nabu:11/RKQ1.200826.002/V13.0.4.0.RKXMIXM:user/release-keys");
     property_override("ro.product.model", "21051182G");
+    property_override("ro.build.version.security_patch", "2022-07-01");
 }
 
 void vendor_load_properties() {

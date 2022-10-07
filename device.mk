@@ -130,10 +130,6 @@ include $(LOCAL_PATH)/properties/default.mk
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
-
 # Telephony & IMS  
 PRODUCT_PACKAGES += \
     ims-ext-common \

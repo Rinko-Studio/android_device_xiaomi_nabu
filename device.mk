@@ -130,6 +130,10 @@ include $(LOCAL_PATH)/properties/default.mk
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# 2-pane layout
+PRODUCT_PACKAGES += \
+    androidx.window.extensions
+
 # Update engine
 PRODUCT_PACKAGES += \
     checkpoint_gc \

@@ -1,5 +1,4 @@
-service vendor.power /vendor/bin/hw/android.hardware.power-service
+service vendor.power /system/bin/hw/android.hardware.power-service
     class hal
     user system
     group system
-    override

@@ -5,3 +5,10 @@ service vendor.light-qti /vendor/bin/hw/android.hardware.lights-service.qti
     shutdown critical
     disabled
     override
+
+service vendor.power-qti /vendor/bin/hw/android.hardware.power-service
+    class hal
+    user system
+    group system
+    disabled
+    override

@@ -56,28 +56,17 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_BINARIES := kernel
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=2048 loop.max_part=7 androidboot.usbcontroller=a600000.dwc3
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_SEPARATED_DTBO := true
-BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
-KERNEL_LD := LD=ld.lld
-TARGET_COMPILE_WITH_MSM_KERNEL := true
-TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc
-TARGET_KERNEL_APPEND_DTB := false
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_HEADER_ARCH := arm64
-
-TARGET_FORCE_PREBUILT_KERNEL := true
-TARGET_PREBUILT_KERNEL := $(NABU_PREBUILT)/kernel/Image
-TARGET_PREBUILT_DTB := $(NABU_PREBUILT)/kernel/dtb.img
-BOARD_PREBUILT_DTBOIMAGE := $(NABU_PREBUILT)/kernel/dtbo.img
-
-TARGET_KERNEL_CONFIG := vendor/nabu_user_defconfig
+BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc
+TARGET_KERNEL_CONFIG := nabu_user_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_SOURCE := kernel/xiaomi/nabu
+TARGET_KERNEL_CLANG_VERSION := r416183b
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_nabu

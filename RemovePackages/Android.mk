@@ -7,7 +7,9 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_OVERRIDES_PACKAGES := \
    Dialer \
    Stk \
-   GoogleDialer
+   GoogleDialer \
+   TeleService \
+   com.android.phone.common
 
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED

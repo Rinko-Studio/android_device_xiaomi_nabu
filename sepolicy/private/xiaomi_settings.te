@@ -33,3 +33,8 @@ allow xiaomi_settings cgroup:file rw_file_perms;
 # Allow xiaomi_settings to read and write to sysfs_graphics
 allow xiaomi_settings sysfs_graphics:dir search;
 allow xiaomi_settings sysfs_graphics:file rw_file_perms;
+
+allow xiaomi_settings hal_touchfeature_xiaomi_hwservice:hwservice_manager find;
+binder_call(xiaomi_settings, hal_touchfeature_xiaomi_default)
+
+allow xiaomi_settings sysfs_xiaomi_keyboard:file rw_file_perms;
